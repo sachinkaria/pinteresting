@@ -8,10 +8,10 @@
 </head>
 <body>
 
-	<%= link_to "Home", root_path %>
-	<%= link_to "Contact Us", contactus_path %>
-	
-<%= yield %>
+<%= render 'layouts/navbar'%>
+<div class="container">
+	<%= yield %>
+</div>
 
 </body>
 </html>
