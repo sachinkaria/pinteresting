@@ -1,5 +1,6 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="navbar-wrapper">
+    <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -15,17 +16,24 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Contact Us", contactus_path%></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                  <form class="form-signin" role="form">
+                      <label for="inputEmail" class="sr-only">Email address</label>
+                         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                           <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                      <div class="checkbox">
+                              <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                              </label>
+                      </div>
+                  <button class="btn btn-lg btn-primary btn-block btn-sm" type="submit">Sign in</button>
+                </form>
+                </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+</div><!-- /.navbar-wrapper -->
 </nav>
