@@ -1,9 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
 
+$jumbotron-bg: #bdc3c7;
 $body-bg: #ecf0f1;
-$navbar-default-bg: #2c3e50;
 $navbar-default-link-color: #ecf0f1;
 $brand-primary: #f39c12;
+
+
 @import 'bootstrap';
 
 
@@ -21,4 +23,8 @@ font-size: 50px;
 .dropdown-menu {
 	padding: 5px 10px 5px 10px;
 	min-width: 200px;
+}
+
+.jumbotron {
+	text-align: center;
 }
