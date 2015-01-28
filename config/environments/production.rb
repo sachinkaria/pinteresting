@@ -78,5 +78,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 #note to set this to actual host name
-  config.action_mailer.default_url_options = { host: => 'www.learnaway.co.uk' }
+  config.action_mailer.default_url_options = { host: => 'learnaway.herokuapp.com' }
 end
