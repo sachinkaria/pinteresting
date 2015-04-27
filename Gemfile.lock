@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 55ce56026fe38ab88e59eb5709c6350e18dd33cd
+  specs:
+    paperclip (4.2.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.5)
+      mime-types
+
+GIT
   remote: git://github.com/wingrunr21/flat-ui-sass.git
   revision: 97b99ebd00a73c17b55cfb537722aede93cc7e49
   specs:
@@ -59,6 +69,10 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.7)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -189,6 +203,7 @@ DEPENDENCIES
   flat-ui-sass!
   jbuilder (~> 2.0)
   jquery-rails
+  paperclip!
   pg
   rails (= 4.2.0)
   rails_12factor
