@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'flat-ui-sass', github: 'wingrunr21/flat-ui-sass'
 gem 'devise', '~> 3.4.1'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk', '< 2.0'
 
 
 group :production do
