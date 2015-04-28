@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 $jumbotron-bg: #bdc3c7;
 $body-bg: #ecf0f1;
@@ -26,5 +28,10 @@ font-size: 50px;
 }
 
 .jumbotron {
+	text-align: center;
+}
+	
+
+.panel-heading {
 	text-align: center;
 }

@@ -17,6 +17,7 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk', '< 2.0'
 gem 'masonry-rails'
 gem 'jquery-turbolinks'
+gem 'will_paginate', '~> 3.0.5'
 
 
 group :production do
