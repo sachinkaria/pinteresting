@@ -18,7 +18,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'masonry-rails'
 gem 'jquery-turbolinks'
 gem 'will_paginate', '~> 3.0.5'
-
+gem 'acts-as-taggable-on', '~> 3.4'
 
 group :production do
 	gem 'pg'
