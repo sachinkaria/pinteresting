@@ -9,8 +9,8 @@
         <%= image_tag @pin.image.url(:medium)%>
       </div>
       <div class="panel-body">
-        <p><%= @pin.date %></p>
         <p><%= @pin.description %></p>
+        <p><%= @pin.date %></p>
         <p><strong><%= @pin.user.email if @pin.user %></strong></p>
 
         <% if @pin.user == current_user %>
