@@ -14,23 +14,32 @@ class PinsController < ApplicationController
 
   def new
     @pin = current_user.pins.build
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
 
   end
 
   def edit
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   def create
     @pin = current_user.pins.build(pin_params)
-    if @pin.save
-      redirect_to @pin, notice: 'Pin was successfully created.'
-    else
-      render action: 'new'
+    @pin.category_id = params[:category_id]
+    respond_to do |format|
+      if @pin.save
+        format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
+        format.json { render :show, status: :created, location: @pin}
+      else
+        format.html { render :new }
+        format.json { render json: @pin.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def update
-    if @pin.update(pin_params)
+    if
+    @pin.update(pin_params)
+     @pin.category_id = params[:category_id]
       redirect_to @pin, notice: 'Pin was successfully updated.'
     else
       render action: 'edit'
@@ -55,6 +64,6 @@ class PinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:description, :image, :date, :tag_list, :link)
+      params.require(:pin).permit(:description, :image, :date, :tag_list, :link, :title, :category)
     end
 end

@@ -1,21 +1,26 @@
         <%= link_to pins_path do %>
-        <span class="glyphicon glyphicon-arrow-left"></span>
-        Back
+        <h1><span class="glyphicon glyphicon-arrow-left"></span></h1>
       <% end %>
 
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
+    <h2><%= @pin.title %></h2>
     <div class="panel panel-default">
       <div class="panel-heading center">
-        <%= image_tag @pin.image.url(:medium)%>
+        <div class="image-responsive">
+                  <%= link_to @pin.link do %>
+        <%= image_tag @pin.image.url(:medium) %>
+                  <% end %>
+      </div>
       </div>
       <div class= "text-center"> 
       <div class="panel-body">
         <p><%= @pin.description %></p>
         <p><%= @pin.date %></p>
+        <p><%= @pin.category %></p>
         <%= link_to "Official Event Page", @pin.link  %>
         <p> </p>
-        <p><strong><%= @pin.user.email if @pin.user %></strong></p>
+        <p><strong><%= @pin.user.name if @pin.user %></strong></p>
 
         <% if @pin.user == current_user %>
         <%= link_to edit_pin_path(@pin) do %>
@@ -24,7 +29,9 @@
       <% end %>
         <% end %>
       </div>
-
+        <%= link_to pins_path do %>
+        <h1><span class="glyphicon glyphicon-arrow-left"></span></h1>
+      <% end %>
       </div>
     </div>
   </div>

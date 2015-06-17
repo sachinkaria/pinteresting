@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511190121) do
+ActiveRecord::Schema.define(version: 20150617173034) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.text     "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string   "name"
@@ -34,6 +41,8 @@ ActiveRecord::Schema.define(version: 20150511190121) do
     t.datetime "image_updated_at"
     t.date     "date"
     t.string   "link"
+    t.string   "title"
+    t.string   "category_id"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
@@ -71,6 +80,7 @@ ActiveRecord::Schema.define(version: 20150511190121) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
