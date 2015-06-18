@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'users/new'
 
   resources :categories
-
+  get 'tags/:tag', to: 'pins#index', as: :tag
   resources :pins
 
   devise_for :users
