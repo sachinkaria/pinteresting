@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   resources :categories
 
   resources :pins
 
   devise_for :users
+  resources :users, only: [:show]
   root 'pins#index'
   get "contactus" => "pages#contactus"
 
