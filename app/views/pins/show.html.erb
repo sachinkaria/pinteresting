@@ -17,7 +17,7 @@
       <div class="panel-body">
         <p><%= @pin.description %></p>
         <p><%= @pin.date %></p>
-        <p><%= @pin.category %></p>
+        <p><%= @pin.category.name %></p>
         <%= link_to "Official Event Page", @pin.link  %>
         <p> </p>
         <p><strong><%= @pin.user.name if @pin.user %></strong></p>
